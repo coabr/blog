@@ -47,43 +47,12 @@
   <div class="pure-g">
   
     <div class="post-index pure-u-1-1">
-      <h2><a href="06/how-a-Unix-CLI-tool-made-me-care-about-software-feedback.html">How a Unix CLI tool made me care about software feedback</a></h2>
+      <h2><a href="05/when-postgres-is-not-enough.html">When Postgres is not enough</a></h2>
 
       <article class="text">
-          <p>Providing feedback is one of the most important parts of any software. Unfortunately, more often than not we tend to downplay or ignore the very simple yet crucial task of letting the user know what is going on. In this article I’ll use a short cautionary tale of how the lack of proper user feedback (and some laziness, I admit) almost cost me an entire HDD with years of personal data.</p>
+          <p>What happens when your project’s RDBMS is just not enough to deal with unexpectedly huge amounts of data?</p>
 
-
-        <div class="post-tags">
-          
-            <div class="tags">
-            
-              <a class="pure-button button-xsmall" href="../tags/Software Engineering">Software Engineering</a>
-            
-              <a class="pure-button button-xsmall" href="../tags/Unix">Unix</a>
-            
-            </div>
-          
-        </div>
-
-        <div class="pure-g post-footer">
-          <div class="pure-u-1-2">
-              <a class="read-more" href="06/how-a-Unix-CLI-tool-made-me-care-about-software-feedback.html">Continue reading ›</a>
-          </div>
-          <div class="pure-u-1-2 post-meta">
-            <aside>Posted Jun 19, 2017</aside>
-
-          </div>
-        </div>
-      </article>
-    </div>
-  
-    <div class="post-index pure-u-1-1">
-      <h2><a href="03/dont-obsess-over-code-dry.html">Don't obsess over code DRYness</a></h2>
-
-      <article class="text">
-          <p>Being clever is a good thing for a developer. Ingenuity allows us to write software that solves complex real-world problems. However, “clever” <em>code</em> is not always a good thing. In many cases — I dare say in <em>most</em> cases — it is a very bad thing. I consciously try to avoid writing code that might be seen as “clever”. The smart thing to do is trying hard not to be smart (yes, very <a href="http://literarydevices.net/war-is-peace/">1984</a>).</p>
-
-<p>Developers tend to see themselves (quite indulgently) as smart people. Not many people understand what we do, and society sees a developer as a kind of modern wizard, writing unreadable magic spells in a small metal box. In reality, though, we are not half as smart as we think: for instance, if you are a developer, you are certainly familiar with the frustration of trying to understand some cryptic piece of code that seemed perfectly reasonable and straightforward when you wrote it a couple of months earlier.</p>
+<p>You could try to de-normalize some tables here and there to avoid unnecessary JOINs, create a few indexes, implement some kind of pagination or even pre-process the data into a more palatable format. However, if you did all that and it still was not enough, the “natural impulse” is to give up on the RDBMS altogether and just use Elasticsearch. Sounds like a no-brainer, right?</p>
 
 
         <div class="post-tags">
@@ -94,16 +63,20 @@
             
               <a class="pure-button button-xsmall" href="../tags/Software Engineering">Software Engineering</a>
             
+              <a class="pure-button button-xsmall" href="../tags/Postgresql">Postgresql</a>
+            
+              <a class="pure-button button-xsmall" href="../tags/SQL">SQL</a>
+            
             </div>
           
         </div>
 
         <div class="pure-g post-footer">
           <div class="pure-u-1-2">
-              <a class="read-more" href="03/dont-obsess-over-code-dry.html">Continue reading ›</a>
+              <a class="read-more" href="05/when-postgres-is-not-enough.html">Continue reading ›</a>
           </div>
           <div class="pure-u-1-2 post-meta">
-            <aside>Posted Mar 20, 2017</aside>
+            <aside>Posted May 08, 2017</aside>
 
           </div>
         </div>
@@ -152,12 +125,12 @@
     </div>
   
     <div class="post-index pure-u-1-1">
-      <h2><a href="05/when-postgres-is-not-enough.html">When Postgres is not enough</a></h2>
+      <h2><a href="03/dont-obsess-over-code-dry.html">Don't obsess over code DRYness</a></h2>
 
       <article class="text">
-          <p>What happens when your project’s RDBMS is just not enough to deal with unexpectedly huge amounts of data?</p>
+          <p>Being clever is a good thing for a developer. Ingenuity allows us to write software that solves complex real-world problems. However, “clever” <em>code</em> is not always a good thing. In many cases — I dare say in <em>most</em> cases — it is a very bad thing. I consciously try to avoid writing code that might be seen as “clever”. The smart thing to do is trying hard not to be smart (yes, very <a href="http://literarydevices.net/war-is-peace/">1984</a>).</p>
 
-<p>You could try to de-normalize some tables here and there to avoid unnecessary JOINs, create a few indexes, implement some kind of pagination or even pre-process the data into a more palatable format. However, if you did all that and it still was not enough, the “natural impulse” is to give up on the RDBMS altogether and just use Elasticsearch. Sounds like a no-brainer, right?</p>
+<p>Developers tend to see themselves (quite indulgently) as smart people. Not many people understand what we do, and society sees a developer as a kind of modern wizard, writing unreadable magic spells in a small metal box. In reality, though, we are not half as smart as we think: for instance, if you are a developer, you are certainly familiar with the frustration of trying to understand some cryptic piece of code that seemed perfectly reasonable and straightforward when you wrote it a couple of months earlier.</p>
 
 
         <div class="post-tags">
@@ -168,9 +141,36 @@
             
               <a class="pure-button button-xsmall" href="../tags/Software Engineering">Software Engineering</a>
             
-              <a class="pure-button button-xsmall" href="../tags/Postgresql">Postgresql</a>
+            </div>
+          
+        </div>
+
+        <div class="pure-g post-footer">
+          <div class="pure-u-1-2">
+              <a class="read-more" href="03/dont-obsess-over-code-dry.html">Continue reading ›</a>
+          </div>
+          <div class="pure-u-1-2 post-meta">
+            <aside>Posted Mar 20, 2017</aside>
+
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div class="post-index pure-u-1-1">
+      <h2><a href="06/how-a-Unix-CLI-tool-made-me-care-about-software-feedback.html">How a Unix CLI tool made me care about software feedback</a></h2>
+
+      <article class="text">
+          <p>Providing feedback is one of the most important parts of any software. Unfortunately, more often than not we tend to downplay or ignore the very simple yet crucial task of letting the user know what is going on. In this article I’ll use a short cautionary tale of how the lack of proper user feedback (and some laziness, I admit) almost cost me an entire HDD with years of personal data.</p>
+
+
+        <div class="post-tags">
+          
+            <div class="tags">
             
-              <a class="pure-button button-xsmall" href="../tags/SQL">SQL</a>
+              <a class="pure-button button-xsmall" href="../tags/Software Engineering">Software Engineering</a>
+            
+              <a class="pure-button button-xsmall" href="../tags/Unix">Unix</a>
             
             </div>
           
@@ -178,10 +178,10 @@
 
         <div class="pure-g post-footer">
           <div class="pure-u-1-2">
-              <a class="read-more" href="05/when-postgres-is-not-enough.html">Continue reading ›</a>
+              <a class="read-more" href="06/how-a-Unix-CLI-tool-made-me-care-about-software-feedback.html">Continue reading ›</a>
           </div>
           <div class="pure-u-1-2 post-meta">
-            <aside>Posted May 08, 2017</aside>
+            <aside>Posted Jun 19, 2017</aside>
 
           </div>
         </div>
@@ -192,7 +192,7 @@
 
 
         <div class="footer">
-          2019 Leonardo Brito
+          2020 Leonardo Brito
         </div>
       </div>
 
