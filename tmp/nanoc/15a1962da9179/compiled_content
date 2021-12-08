@@ -1,0 +1,849 @@
+{:	data{o:Nanoc::Core::Identifier:
+@type:	full:@stringI"/index.html.erb:ET{:default{
+:rawU: Nanoc::Core::TextualContent[I"6/home/carol/workspace/blog/content/index.html.erb;
+TI"u<% render('/posts_index.*', posts: sorted_articles, title: nil, show_tags: true) do %>
+  <%= yield %>
+<% end %>
+;
+T:preU;[0I"%<div class='pure-g'>
+  
+</div>
+
+;
+T:_0U;[0I"–<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Codify - Home</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link rel="stylesheet" href="assets/highlight.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc 4.11.9">
+  </head>
+  <body>
+    <div id="layout">
+      <div class="header">
+        <h1>
+          <a href="./">Codify</a>
+        </h1>
+      </div>
+
+
+      <div class="content">
+        <nav class="pure-g">
+          <div class="pure-u-2-3 links">
+            <a href="index.html">Home</a> ¬∑
+            <a href="tags.html">Tags</a> ¬∑
+            <a href="years.html">Years</a> ¬∑
+            <a href="about.html">About</a>
+          </div>
+
+          <div class="pure-u-1-3">
+            <div class="contact">
+              <span>
+                <a href="https://github.com/kombuchy" target="_blank">
+                  <img src="assets/icons/github.svg" alt="Github icon">
+                  </a>
+              </span>
+              <span>
+                <a href="https://www.linkedin.com/in/kombuchy/" target="_blank">
+                <img src="assets/icons/linkedin.svg" alt="LinkedIn icon">
+                </a>
+              </span>
+            </div>
+          </div>
+        </nav>
+        <div class="pure-g">
+  
+</div>
+
+
+        <div class="footer">
+          Carolina Brito, 2021 
+        </div>
+      </div>
+
+    </div>
+  
+
+</body></html>;
+T:	post@:	last@o;;;;	I"/tags.html.erb;
+T{;{
+;U;[I"5/home/carol/workspace/blog/content/tags.html.erb;
+TI"ò<h1>Tags</h1>
+
+<% all_tags.each do |tag, count| %>
+  <h2><%= link_for_tag(tag, 'tags/') %> (<%= count %> post<%= 's' if count > 1 %>)
+  </h2>
+<% end %>
+;
+T;U;[0I"<h1>Tags</h1>
+
+
+;
+T;U;[0I"¿<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Codify - Tags</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link rel="stylesheet" href="assets/highlight.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc 4.11.9">
+  </head>
+  <body>
+    <div id="layout">
+      <div class="header">
+        <h1>
+          <a href="./">Codify</a>
+        </h1>
+      </div>
+
+
+      <div class="content">
+        <nav class="pure-g">
+          <div class="pure-u-2-3 links">
+            <a href="index.html">Home</a> ¬∑
+            <a href="tags.html">Tags</a> ¬∑
+            <a href="years.html">Years</a> ¬∑
+            <a href="about.html">About</a>
+          </div>
+
+          <div class="pure-u-1-3">
+            <div class="contact">
+              <span>
+                <a href="https://github.com/kombuchy" target="_blank">
+                  <img src="assets/icons/github.svg" alt="Github icon">
+                  </a>
+              </span>
+              <span>
+                <a href="https://www.linkedin.com/in/kombuchy/" target="_blank">
+                <img src="assets/icons/linkedin.svg" alt="LinkedIn icon">
+                </a>
+              </span>
+            </div>
+          </div>
+        </nav>
+        <h1>Tags</h1>
+
+
+
+        <div class="footer">
+          Carolina Brito, 2021 
+        </div>
+      </div>
+
+    </div>
+  
+
+</body></html>;
+T;@ ;@ o;;;;	I"/years.html.erb;
+T{;{
+;U;[I"6/home/carol/workspace/blog/content/years.html.erb;
+TI"Ô<h1>Posts by year</h1>
+
+<% all_years.each do |year, count| %>
+  <% year_page = @items.find { |i| i.identifier == "/years/#{year}" } %>
+  <h2><%= link_to(year.to_s, year_page) %> (<%= count %> post<%= 's' if count > 1 %>)
+  </h2>
+<% end %>
+;
+T;U;[0I"<h1>Posts by year</h1>
+
+
+;
+T;U;[0I" <!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Codify - Years</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link rel="stylesheet" href="assets/highlight.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc 4.11.9">
+  </head>
+  <body>
+    <div id="layout">
+      <div class="header">
+        <h1>
+          <a href="./">Codify</a>
+        </h1>
+      </div>
+
+
+      <div class="content">
+        <nav class="pure-g">
+          <div class="pure-u-2-3 links">
+            <a href="index.html">Home</a> ¬∑
+            <a href="tags.html">Tags</a> ¬∑
+            <a href="years.html">Years</a> ¬∑
+            <a href="about.html">About</a>
+          </div>
+
+          <div class="pure-u-1-3">
+            <div class="contact">
+              <span>
+                <a href="https://github.com/kombuchy" target="_blank">
+                  <img src="assets/icons/github.svg" alt="Github icon">
+                  </a>
+              </span>
+              <span>
+                <a href="https://www.linkedin.com/in/kombuchy/" target="_blank">
+                <img src="assets/icons/linkedin.svg" alt="LinkedIn icon">
+                </a>
+              </span>
+            </div>
+          </div>
+        </nav>
+        <h1>Posts by year</h1>
+
+
+
+        <div class="footer">
+          Carolina Brito, 2021 
+        </div>
+      </div>
+
+    </div>
+  
+
+</body></html>;
+T;@.;@.o;;;;	I"/about.md;
+T{;{
+;U;[I"0/home/carol/workspace/blog/content/about.md;
+TI"ù# About
+
+Hi, I'm Carolina, but please call me Carol :)
+I'm originally graduated in Business Management and Civil Engineer. I'm from Brazil but living in Canada since 2021.
+Got to know about programming around 2018 when I was living in Russia, started studing more about in 2019 and in 2020 I got my first job as a Software Developer. Since then I've been learning a lot, as I had at that time a total of zero background about it. 
+Nowadays I work at an awesome company based in Brazil called [Capyba](https://capyba.com/).
+
+You can learn about how this blog was created, all information can be found on [this repository](https://github.com/lbrito1/sane-blog-builder).
+
+;
+T;U;[0I"€<h1 id="about">About</h1>
+
+<p>Hi, I‚Äôm Carolina, but please call me Carol :)
+I‚Äôm originally graduated in Business Management and Civil Engineer. I‚Äôm from Brazil but living in Canada since 2021.
+Got to know about programming around 2018 when I was living in Russia, started studing more about in 2019 and in 2020 I got my first job as a Software Developer. Since then I‚Äôve been learning a lot, as I had at that time a total of zero background about it. 
+Nowadays I work at an awesome company based in Brazil called <a href="https://capyba.com/">Capyba</a>.</p>
+
+<p>You can learn about how this blog was created, all information can be found on <a href="https://github.com/lbrito1/sane-blog-builder">this repository</a>.</p>
+
+;
+T;U;[0I"å	<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Codify - About</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <link rel="stylesheet" href="assets/highlight.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="Nanoc 4.11.9">
+  </head>
+  <body>
+    <div id="layout">
+      <div class="header">
+        <h1>
+          <a href="./">Codify</a>
+        </h1>
+      </div>
+
+
+      <div class="content">
+        <nav class="pure-g">
+          <div class="pure-u-2-3 links">
+            <a href="index.html">Home</a> ¬∑
+            <a href="tags.html">Tags</a> ¬∑
+            <a href="years.html">Years</a> ¬∑
+            <a href="about.html">About</a>
+          </div>
+
+          <div class="pure-u-1-3">
+            <div class="contact">
+              <span>
+                <a href="https://github.com/kombuchy" target="_blank">
+                  <img src="assets/icons/github.svg" alt="Github icon">
+                  </a>
+              </span>
+              <span>
+                <a href="https://www.linkedin.com/in/kombuchy/" target="_blank">
+                <img src="assets/icons/linkedin.svg" alt="LinkedIn icon">
+                </a>
+              </span>
+            </div>
+          </div>
+        </nav>
+        <h1 id="about">About</h1>
+
+<p>Hi, I‚Äôm Carolina, but please call me Carol :)
+I‚Äôm originally graduated in Business Management and Civil Engineer. I‚Äôm from Brazil but living in Canada since 2021.
+Got to know about programming around 2018 when I was living in Russia, started studing more about in 2019 and in 2020 I got my first job as a Software Developer. Since then I‚Äôve been learning a lot, as I had at that time a total of zero background about it. 
+Nowadays I work at an awesome company based in Brazil called <a href="https://capyba.com/">Capyba</a>.</p>
+
+<p>You can learn about how this blog was created, all information can be found on <a href="https://github.com/lbrito1/sane-blog-builder">this repository</a>.</p>
+
+
+        <div class="footer">
+          Carolina Brito, 2021 
+        </div>
+      </div>
+
+    </div>
+  
+
+</body></html>;
+T;@<;@<o;;;;	I"/assets/stylesheet.scss;
+T{;{	;U;[I">/home/carol/workspace/blog/content/assets/stylesheet.scss;
+TI"â
+// Palette
+$color1: #000;
+$color2: #111;
+$color3: #999;
+$color4: #BBB;
+$color5: #EEE;
+
+$color-hyperlink: #5aafdb;
+
+$font-serif: "Didot", serif;
+
+a {
+  color: $color-hyperlink;
+  text-decoration: none;
+}
+
+h1 { font-weight: 300; }
+h2 { font-weight: 300; }
+
+aside { font-family:  $font-serif; }
+
+body {
+  color: #222;
+  font-family:  $font-serif;
+  font-size: 22px;
+}
+
+.text {
+  font-family:  $font-serif;
+  color: $color2;
+  line-height: 1.6em;
+}
+
+// Navigation
+nav {
+  padding: 1em 0;
+  color: $color2;
+  border-bottom: 1px solid $color3;
+  margin-bottom: 1em;
+  a {
+    font-family:  $font-serif;
+    font-size: 95%;
+    color: $color1;
+  }
+
+  .contact {
+    img {
+      width: 1em;
+      height: 1em;
+    }
+    float: right;
+    span {
+      margin: 2px;
+    }
+  }
+}
+
+// Layout
+#layout {
+  position: relative;
+  left: 0;
+  padding-left: 0;
+}
+
+// Main content
+.content {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 800px;
+  margin-bottom: 50px;
+  line-height: 1.8em;
+  h1 { text-align: center; }
+
+  .footer {
+    margin: 20px 0;
+    color: $color2;
+    font-size: 90%;
+    text-align: center;
+  }
+}
+
+.header {
+  margin: 0;
+  color: #333;
+  text-align: center;
+  padding: 2.5em 2em 0;
+  // background-image: linear-gradient(to left top, #bfcbe1, #b4c5e2, #aabee4, #9fb8e5, #94b1e6, #8aa9e4, #7fa2e2, #759ae0, #688fda, #5b84d4, #4e7ace, #406fc8);
+
+  // Site title
+  h1 {
+    margin: 0.2em 0;
+    font-weight: 300;
+    font-size: 300%;
+  }
+  a {
+    color: $color1;
+  }
+}
+
+// Post (Index)
+.post-index {
+  border-bottom: 1px solid $color3;
+  padding: 1.5em 0;
+  .post-tags {
+    display: inline-block;
+    margin: 10px 0;
+  }
+  h2 a {
+    font-family:  $font-serif;
+    color: $color2;
+    font-weight: 300;
+  }
+  aside {
+    color: $color3;
+  }
+  .read-more {
+    font-size: 90%;
+  }
+  .tags {
+    font-family:  $font-serif;
+    color: $color3;
+  }
+  .post-meta {
+    text-align: right;
+    font-size: 90%;
+  }
+  .post-footer {
+  }
+}
+
+// Post (Show)
+.post-show {
+  h1 {
+    text-align: center;
+    color: $color2;
+    font-weight: 300;
+  }
+  aside {
+    font-style: italic;
+    color: $color3;
+  }
+  .post-footer {
+    padding: 40px 0;
+  }
+}
+
+article {
+  img {
+    width: 100%;
+  }
+}
+
+.button-xsmall {
+    font-size: 70%;
+}
+
+.image-box {
+  text-align: center;
+  .image-caption {
+    color: $color3;
+    font-style: italic;
+    text-align: center;
+    font-size: 70%;
+  }
+}
+
+// Syntax highlighting
+.highlight {
+  padding: 0 10px;
+  font-size: 80%;
+}
+
+// Responsive media queries
+@media(max-width: 1000px) {
+  .content {
+    margin: 0.5em;
+    max-width: 100%;
+  }
+  * { font-size: 110%; }
+  h2 {
+    font-size: 180%;
+    line-height: 1.5em;
+  }
+  nav {
+    a {
+      font-size: 120%;
+    }
+  }
+}
+;
+T;U;[0I"ıa {
+  color: #5aafdb;
+  text-decoration: none; }
+
+h1 {
+  font-weight: 300; }
+
+h2 {
+  font-weight: 300; }
+
+aside {
+  font-family: "Didot", serif; }
+
+body {
+  color: #222;
+  font-family: "Didot", serif;
+  font-size: 22px; }
+
+.text {
+  font-family: "Didot", serif;
+  color: #111;
+  line-height: 1.6em; }
+
+nav {
+  padding: 1em 0;
+  color: #111;
+  border-bottom: 1px solid #999;
+  margin-bottom: 1em; }
+  nav a {
+    font-family: "Didot", serif;
+    font-size: 95%;
+    color: #000; }
+  nav .contact {
+    float: right; }
+    nav .contact img {
+      width: 1em;
+      height: 1em; }
+    nav .contact span {
+      margin: 2px; }
+
+#layout {
+  position: relative;
+  left: 0;
+  padding-left: 0; }
+
+.content {
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 800px;
+  margin-bottom: 50px;
+  line-height: 1.8em; }
+  .content h1 {
+    text-align: center; }
+  .content .footer {
+    margin: 20px 0;
+    color: #111;
+    font-size: 90%;
+    text-align: center; }
+
+.header {
+  margin: 0;
+  color: #333;
+  text-align: center;
+  padding: 2.5em 2em 0; }
+  .header h1 {
+    margin: 0.2em 0;
+    font-weight: 300;
+    font-size: 300%; }
+  .header a {
+    color: #000; }
+
+.post-index {
+  border-bottom: 1px solid #999;
+  padding: 1.5em 0; }
+  .post-index .post-tags {
+    display: inline-block;
+    margin: 10px 0; }
+  .post-index h2 a {
+    font-family: "Didot", serif;
+    color: #111;
+    font-weight: 300; }
+  .post-index aside {
+    color: #999; }
+  .post-index .read-more {
+    font-size: 90%; }
+  .post-index .tags {
+    font-family: "Didot", serif;
+    color: #999; }
+  .post-index .post-meta {
+    text-align: right;
+    font-size: 90%; }
+
+.post-show h1 {
+  text-align: center;
+  color: #111;
+  font-weight: 300; }
+.post-show aside {
+  font-style: italic;
+  color: #999; }
+.post-show .post-footer {
+  padding: 40px 0; }
+
+article img {
+  width: 100%; }
+
+.button-xsmall {
+  font-size: 70%; }
+
+.image-box {
+  text-align: center; }
+  .image-box .image-caption {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    font-size: 70%; }
+
+.highlight {
+  padding: 0 10px;
+  font-size: 80%; }
+
+@media (max-width: 1000px) {
+  .content {
+    margin: 0.5em;
+    max-width: 100%; }
+
+  * {
+    font-size: 110%; }
+
+  h2 {
+    font-size: 180%;
+    line-height: 1.5em; }
+
+  nav a {
+    font-size: 120%; } }
+;
+T;@G;@Go;;;;	I"/assets/highlight.css;
+T{;{	;U;[I"</home/carol/workspace/blog/content/assets/highlight.css;
+TI"Ë.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cm {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .c1 {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #75715e;
+  font-weight: bold;
+}
+.highlight .cs {
+  color: #75715e;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.highlight .gi {
+  color: #ffffff;
+  background-color: #324932;
+}
+.highlight .gd {
+  color: #ffffff;
+  background-color: #493131;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .k, .highlight .kv {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kc {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .ow {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sc {
+  color: #e6db74;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .sr {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .ss {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nd {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .ne {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .bp {
+  color: #f8f8f2;
+}
+.highlight .nb {
+  color: #f8f8f2;
+}
+.highlight .ni {
+  color: #f8f8f2;
+}
+.highlight .nn {
+  color: #f8f8f2;
+}
+.highlight .vc {
+  color: #f8f8f2;
+}
+.highlight .vg {
+  color: #f8f8f2;
+}
+.highlight .vi {
+  color: #f8f8f2;
+}
+.highlight .nv, .highlight .vm {
+  color: #f8f8f2;
+}
+.highlight .w {
+  color: #f8f8f2;
+}
+.highlight .nl {
+  color: #f8f8f2;
+  font-weight: bold;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight {
+  color: #f8f8f2;
+  background-color: #49483e;
+}
+;
+T;@N;@N;@No;;;;	I"/assets/icons/github.svg;
+T{;{	;o:Nanoc::Core::BinaryContent:@filenameI"?/home/carol/workspace/blog/content/assets/icons/github.svg;
+T;@V;@V;@Vo;;;;	I"/assets/icons/linkedin.svg;
+T{;{	;o;;I"A/home/carol/workspace/blog/content/assets/icons/linkedin.svg;
+T;@\;@\;@\:versioni
