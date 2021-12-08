@@ -4,32 +4,10 @@ title: About
 
 # About
 
-This is a static blog generator.
+Hi, I'm Carolina, but please call me Carol :)
+I'm originally graduated in Business Management and Civil Engineer. I'm from Brazil but living in Canada since 2021.
+Got to know about programming around 2018 when I was living in Russia, started studing more about in 2019 and in 2020 I got my first job as a Software Developer. Since then I've been learning a lot, as I had at that time a total of zero background about it. 
+Nowadays I work at an awesome company based in Brazil called [Capyba](https://capyba.com/).
 
-There are approximately 1 trillion similar projects spread over an [unfathomable amount of different libraries](https://www.staticgen.com/).
+You can learn about how this blog was created, all information can be found on [this repository](https://github.com/lbrito1/sane-blog-builder).
 
-This uses Ruby (more specifically, the excellent [Nanoc](https://nanoc.ws) lib) to generate static HTML pages from Markdown or other HTML files.
-
-[Pure CSS](https://purecss.io/) is sparingly used to help with layouts and such. I recommend that you don't look at the CSS, just trust that it works most times.
-
-<%= render('/image.*', src: '/assets/images/monkey.gif', alt: 'A monkey typing on a computer', caption: 'Myself trying to write CSS.') %>
-
-## Features
-* Zero amount of Javascript;
-* Basic blogging functionalities (a page that lists all posts, a page to show the actual post, tagging etc);
-* Syntax highlighting;
-* Readable on any device known to mankind (actually I tested only on my monitor and smartphone);
-* A page that shows posts by year;
-* A page that shows posts by tag;
-* A helper for images;
-* A rake task that helps set up a new post;
-* Small: the entire output of this skeleton is like 100KB (images excluded);
-* Has stupid emojis 🎨 (okay that's just your browser);
-* That's about it.
-
-## Why?
-Why not?
-
-## Myself
-
-My name is Leo and I'm a software developer. I enjoy Ruby. You can find my Github and Linkedin profiles in the page header.

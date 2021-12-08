@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/assets/stylesheet.css">
     <link rel="stylesheet" href="/assets/highlight.css">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
   </head>
@@ -31,12 +33,12 @@
           <div class="pure-u-1-3">
             <div class="contact">
               <span>
-                <a href="https://github.com/lbrito1" download="">
+                <a href="https://github.com/kombuchy" target="_blank">
                   <img src="/assets/icons/github.svg" alt="Github icon"  />
                   </a>
               </span>
               <span>
-                <a href="https://www.linkedin.com/in/leonardo-mendes-brito/">
+                <a href="https://www.linkedin.com/in/kombuchy/" target="_blank">
                 <img src="/assets/icons/linkedin.svg" alt="LinkedIn icon"  />
                 </a>
               </span>
@@ -45,7 +47,7 @@
         </nav>
         <%= yield %>
         <div class="footer">
-          <%= Time.now.year.to_s %> Leonardo Brito
+          Carolina Brito, <%= Time.now.year.to_s %> 
         </div>
       </div>
 
